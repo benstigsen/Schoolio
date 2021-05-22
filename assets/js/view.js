@@ -13,10 +13,6 @@ function initView() {
   todolist.appendChild(content);
 }
 
-function initCreate() {
-  // This should create textboxes and editable content
-}
-
 function addItem(title, description) {
   let fragment = new DocumentFragment();
 

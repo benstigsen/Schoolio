@@ -2,7 +2,11 @@
 
 function getUrlParameters() {
   // Split URL parameters
-  let parameters = window.location.search.split("?")[1].split("&");
+  let url = window.location.search;
+
+  if (url === undefined || url.length === 0) {return {}}
+  
+  let parameters = url.split("?")[1].split("&");
   
   // Get decoded keys and values from URL
   let map = {};
@@ -11,6 +15,7 @@ function getUrlParameters() {
     let key = decodeURI(parameters[i].substring(0, pos));
     let val = decodeURI(parameters[i].substring(pos + 1));
     
+    // Add map key and value
     if (key !== -1 && val !== -1) {
       map[key] = val;
     }
