@@ -5,8 +5,8 @@ function initCreate() {
   let request = getUrlParameters();
   
   let content = new DocumentFragment();
-  for (const key in request) {
-    content.appendChild(addItem(key, request[key]));
+  for (let i = 0; i < request.length; i++) {
+    content.appendChild(addItem(request[i][0], request[i][1]));
   }
   
   // Add <content> to DOM
