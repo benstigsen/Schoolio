@@ -6,14 +6,12 @@ function getUrlParameters() {
 
   if (url === undefined || url.length === 0) {return {}}
   
-  let parameters = decodeURI(url).split("?")[1].split("&");
+  let parameters = decodeURI(url).substring(1).split("&");
   
   // Get decoded keys and values from URL
   let items = [];
   for (let i = 0; i < parameters.length; i++) {
     let pos = parameters[i].indexOf("=");
-    
-    console.log(pos);
     let key = parameters[i].substring(0, pos);
     let val = parameters[i].substring(pos + 1);
     

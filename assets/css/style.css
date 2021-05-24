@@ -23,6 +23,25 @@ a {
   margin-bottom: 20px;
 }
 
+#edit {
+  margin-bottom: 20px;
+}
+
+#shareurl {
+  font-family: 'KoHo', sans-serif;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding-top: 0;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 3px;
+}
 
 .todoitem {
   border-style: dotted;

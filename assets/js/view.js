@@ -34,6 +34,10 @@ function addItem(title, description) {
   return fragment;
 }
 
+function editItems() {
+  window.location.href = 'https://stigsen.xyz/create.html' + window.location.search;
+}
+
 function getRandomRGB(min, max) {
   return [  
     Math.random() * (max - min) + min,

@@ -84,6 +84,26 @@ function generateURL() {
   return encodeURI(url);
 }
 
+function shareURL() {
+  let element = document.getElementById("shareurl");
+  let url = generateURL();
+  
+  element.innerText = window.location.protocol + "//stigsen.xyz/view.html" + url;
+}
+
+function copyURL() {
+  shareURL();
+  
+  let element = document.getElementById("shareurl");
+  let range = document.createRange();
+  
+  range.selectNode(element);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+}
+
 function getRandomRGB(min, max) {
   return [  
     Math.random() * (max - min) + min,
